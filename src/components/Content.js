@@ -1,9 +1,28 @@
-import React, { Fragment } from "react";
+import React, { Fragment, Component } from "react";
+import ModificarUsuario from "../Fomulario/ModificarUsuario";
+import Diagnostico from "../Fomulario/Diagnostico";
+import Principal from "../Home/Principal";
 
-export default function Content() {
-  return (
-    <Fragment>
-      <div className="content-wrapper">Content</div>
-    </Fragment>
-  );
+class Content extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
+
+  render() {
+    let { contenido } = this.props;
+
+    return (
+      <Fragment>
+        <div className="content-wrapper">
+          <div className="content-header">
+            {contenido == "home" && <Principal />}
+            {contenido == "modificar" && <ModificarUsuario />}
+            {contenido == "diagnostico" && <Diagnostico />}
+          </div>
+        </div>
+      </Fragment>
+    );
+  }
 }
+export default Content;
