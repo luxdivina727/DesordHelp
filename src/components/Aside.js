@@ -7,7 +7,9 @@ class Aside extends Component {
   }
 
   render() {
-    let { cambiarContenido } = this.props;
+    let { cambiarContenido, contenido } = this.props;
+
+    //alert(contenido)
 
     return (
       <Fragment>
@@ -61,25 +63,25 @@ class Aside extends Component {
                 role="menu"
                 data-accordion="false"
               >
-                <li className="nav-item menu-open" onClick={ () => cambiarContenido('home') }>
+                <li className={ (contenido=='home') ? 'nav-item menu-open': 'nav-item' } onClick={ () => cambiarContenido('home') }>
                   <p className="nav-link">
                     <i className="nav-icon fas fa-home" />
                     <p>Home</p>
                   </p>
                 </li>
-                <li className="nav-item" onClick={ () => cambiarContenido('modificar') }>
+                <li className={ (contenido=='modificar') ? 'nav-item menu-open': 'nav-item' } onClick={ () => cambiarContenido('modificar') }>
                   <p className="nav-link">
                     <i className="nav-icon fas fa-user" />
                     <p>Modificar Información</p>
                   </p>
                 </li>
-                <li className="nav-item">
-                  <a href="#" className="nav-link">
+                <li className={ (contenido=='diagnostico') ? 'nav-item menu-open': 'nav-item' } onClick={ () => cambiarContenido('diagnostico')}>
+                  <p className="nav-link">
                     <i className="nav-icon fas fa-copy" />
                     <p>Realización de Diagnostico</p>
-                  </a>
+                  </p>
                 </li>
-                <li className="nav-item" onClick={ () => cambiarContenido('Login') }>
+                <li className={ (contenido=='Login') ? 'nav-item menu-open': 'nav-item' } onClick={ () => cambiarContenido('Login') }>
                   <p className="nav-link">
                     <i className="nav-icon fas fa-sign-out-alt" />
                     <p>Cerrar Sección</p>

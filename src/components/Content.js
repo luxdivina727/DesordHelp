@@ -1,5 +1,6 @@
 import React, { Fragment, Component } from "react";
 import ModificarUsuario from "../Fomulario/ModificarUsuario";
+import Diagnostico from "../Fomulario/Diagnostico";
 import Principal from "../Home/Principal";
 
 class Content extends Component {
@@ -17,6 +18,7 @@ class Content extends Component {
           <div className="content-header">
             {contenido == "home" && <Principal />}
             {contenido == "modificar" && <ModificarUsuario />}
+            {contenido == "diagnostico" && <Diagnostico />}
           </div>
         </div>
       </Fragment>

@@ -27,7 +27,7 @@ class App extends Component {
         {valor != "Login" && (
           <>
             <Header />
-            <Aside cambiarContenido={cambiarContenido} />
+            <Aside contenido={valor} cambiarContenido={cambiarContenido} />
             <Content contenido={valor} />
             <Footer />
           </>
