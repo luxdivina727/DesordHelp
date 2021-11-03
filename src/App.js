@@ -3,30 +3,35 @@ import Aside from "./components/Aside";
 import Content from "./components/Content";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
-import ModificarUsuario from "./Fomulario/ModificarUsuario";
+import Login from "./Fomulario/Login";
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      valor: 'home'
+      valor: "home",
     };
   }
 
   render() {
-
     const cambiarContenido = (contendio) => {
-      this.setState({ valor: contendio })
-    }
-    
-    let { valor} = this.state;
+      this.setState({ valor: contendio });
+    };
+
+    let { valor } = this.state;
 
     return (
       <Fragment>
-        <Header />
-        <Aside cambiarContenido={cambiarContenido} />
-        <Content contenido={valor} />
-        <Footer />
+        {valor == "Login" && <Login cambiarContenido={cambiarContenido}/>}
+
+        {valor != "Login" && (
+          <>
+            <Header />
+            <Aside cambiarContenido={cambiarContenido} />
+            <Content contenido={valor} />
+            <Footer />
+          </>
+        )}
       </Fragment>
     );
   }

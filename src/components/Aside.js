@@ -79,11 +79,11 @@ class Aside extends Component {
                     <p>Realización de Diagnostico</p>
                   </a>
                 </li>
-                <li className="nav-item">
-                  <a href="../login.html" className="nav-link">
+                <li className="nav-item" onClick={ () => cambiarContenido('Login') }>
+                  <p className="nav-link">
                     <i className="nav-icon fas fa-sign-out-alt" />
                     <p>Cerrar Sección</p>
-                  </a>
+                  </p>
                 </li>
               </ul>
             </nav>
