@@ -74,7 +74,7 @@ export default function Aside() {
               </a>
             </li>
             <li className="nav-item">
-              <a href="#" className="nav-link">
+              <a href="../diagnostico.html" className="nav-link">
                 <i className="nav-icon fas fa-copy" />
                 <p>
                   Realización de Diagnostico
