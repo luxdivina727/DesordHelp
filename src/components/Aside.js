@@ -58,7 +58,7 @@ export default function Aside() {
          with font-awesome or any other icon font library */}
             
             <li className="nav-item menu-open">
-              <a href="pages/widgets.html" className="nav-link">
+              <a href="" className="nav-link">
                 <i className="nav-icon fas fa-home" />
                 <p>
                   Home
@@ -66,7 +66,7 @@ export default function Aside() {
               </a>
             </li>
             <li className="nav-item ">
-              <a href="../View/modificarUsuario.html" className="nav-link">
+              <a href="../modificarUsuario.html" className="nav-link">
                 <i className="nav-icon fas fa-user" />
                 <p>
                   Modificar Información
@@ -82,10 +82,10 @@ export default function Aside() {
               </a>
             </li>
             <li className="nav-item">
-              <a href="#" className="nav-link">
+              <a href="../login.html" className="nav-link">
                 <i className="nav-icon fas fa-sign-out-alt" />
                 <p>
-                  Salir
+                  Cerrar Sección
                 </p>
               </a>
             </li>
