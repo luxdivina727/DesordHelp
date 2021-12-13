@@ -10,6 +10,19 @@ class App extends Component {
     super(props);
     this.state = {
       valor: "home",
+      persona: {
+        "Identificacion" : 12342,
+        "PrimerNombre" : "Luz",
+        "SegundoNombre" : "Divina",
+        "PrimerApellido":"Barrios",
+        "SegundoApellido":"Rojas",
+        "Estatura":165,
+        "FechaNacimiento":"05/11/2001",
+        "UsuarioCreacion":"ADMIN",
+        "FechaCreacion":"11/29/2021",
+        "UsuarioActualizacion":"ADMIN",
+        "FechaActualizacion":"11/29/2021"
+      }
     };
   }
 
@@ -18,7 +31,7 @@ class App extends Component {
       this.setState({ valor: contendio });
     };
 
-    let { valor } = this.state;
+    let { valor, persona } = this.state;
 
     return (
       <Fragment>
@@ -27,7 +40,7 @@ class App extends Component {
         {valor != "Login" && (
           <>
             <Header />
-            <Aside contenido={valor} cambiarContenido={cambiarContenido} />
+            <Aside contenido={valor} persona={persona} cambiarContenido={cambiarContenido} />
             <Content contenido={valor} />
             <Footer />
           </>

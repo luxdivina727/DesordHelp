@@ -3,10 +3,13 @@ import React, { Fragment, Component } from "react";
 class Diagnostico extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      diag: false
+    };
   }
 
   render() {
+    let { diag } = this.state
     return (
       <Fragment>
           <div class="content-header">
@@ -38,6 +41,7 @@ class Diagnostico extends Component {
                         </div>
                       </div>
                     </div>
+                    { !diag ? 
                     <div class="card-body">
                       <div class="d-flex mb-2">
                         <div class="col-6">
@@ -80,11 +84,16 @@ class Diagnostico extends Component {
                         </div>
                       </div>
                       <div class="col text-center mt-4">
-                        <button type="button" class="btn btn-dark">
+                        <button type="button" class="btn btn-dark" onClick={ ()=> this.setState({ diag: true}) }>
                           Guardar
                         </button>
                       </div>
                     </div>
+                    :
+                    <div class="card-body">
+                      <h1 style={{ textAlign: "center"}}>Diagnostico Guardado</h1>
+                    </div>
+                    }
                   </div>
                 </div>
               </div>

@@ -7,7 +7,7 @@ class Aside extends Component {
   }
 
   render() {
-    let { cambiarContenido, contenido } = this.props;
+    let { cambiarContenido, contenido, persona } = this.props;
 
     //alert(contenido)
 
@@ -21,7 +21,7 @@ class Aside extends Component {
               className="brand-image img-circle elevation-3"
               style={{ opacity: ".8" }}
             />
-            <span className="brand-text font-weight-light">CADELAHOZ</span>
+            <span className="brand-text font-weight-light">{ persona.PrimerNombre+""+persona.SegundoApellido }</span>
           </a>
 
           <div className="sidebar">
@@ -35,7 +35,9 @@ class Aside extends Component {
               </div>
               <div className="info">
                 <a href="#" className="d-block">
-                  Cassanda De La Hoz
+                  { 
+                    persona.PrimerNombre+" "+persona.SegundoNombre                
+                  }
                 </a>
               </div>
             </div>

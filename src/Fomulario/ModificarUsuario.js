@@ -1,4 +1,6 @@
 import React, { Fragment, Component } from "react";
+import { consulta } from "../API/funciones";
+
 
 class ModificarUsuario extends Component {
   constructor(props) {
@@ -7,7 +9,7 @@ class ModificarUsuario extends Component {
   }
 
   render() {
-    return (
+    return(
       <Fragment>
         <div className="content-header">
           <div className="container-fluid">
